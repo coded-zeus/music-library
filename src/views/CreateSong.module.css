@@ -1,0 +1,122 @@
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-top: 7%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #e4f5ff;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #e4f5ff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #63809c4f;
+  color: #e4f5ff;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+.form button {
+  display: block;
+  margin: 0 auto;
+  background-color: #007bff;
+  color: #e4f5ff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: transparent;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.form button:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(71, 115, 220, 0.5),
+    0.125rem 0.125rem 1rem rgba(144, 110, 240, 0.5);
+}
+
+.form button:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(71, 115, 220, 0.5),
+    0.125rem 0.125rem 1rem rgba(144, 110, 240, 0.5);
+}
+
+.required_span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 2fr);
+    align-items: center;
+    grid-gap: 30px;
+    padding: 50px;
+  }
+
+  .header {
+    margin-top: 5%;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .form-group textarea {
+    resize: none;
+    height: 80px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .form button {
+    margin: 2rem 11rem;
+    font-size: 18px;
+    grid-column: 1/ -1;
+  }
+}

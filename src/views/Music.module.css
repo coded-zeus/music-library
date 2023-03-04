@@ -1,0 +1,78 @@
+.music__ul {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 1.75rem 5%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 7%;
+}
+
+.loading_screen_div {
+  position:fixed;
+  width:100%;
+  left:0;right:0;top:0;bottom:0;
+  background-color: rgba(3, 6, 7, 0.48);
+  z-index:9999;
+}
+
+@-webkit-keyframes spin {
+from {-webkit-transform:rotate(0deg);}
+to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}
+
+.loading_screen_div::after {
+  content:'';
+  display:block;
+  position:absolute;
+  left:48%;top:40%;
+  width:40px;height:40px;
+  border-style:solid;
+  border-color: #e4f5ff;
+  border-top-color:transparent;
+  border-width: 4px;
+  border-radius:50%;
+  -webkit-animation: spin .8s linear infinite;
+  animation: spin .8s linear infinite;
+}
+
+@media screen and (max-width: 1367px) {
+  .music__ul {
+    grid-template-columns: repeat(3, 30%);
+    padding: 0 2%;
+    padding-bottom: 6%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .music__ul {
+    grid-template-columns: repeat(2, 48%);
+    gap: 1.75rem 4%;
+    padding: 0 2%;
+    padding-bottom: 13%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .music__ul {
+    grid-template-columns: repeat(1, 100%);
+    gap: 1.5rem 4%;
+    padding: 0 3%;
+    padding-bottom: 35%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .music__ul {
+    grid-template-columns: repeat(1, 100%);
+    gap: 1.25rem 5%;
+    padding: 0 4%;
+    padding-bottom: 45%;
+  }
+}
